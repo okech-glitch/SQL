@@ -1,0 +1,1 @@
+SELECT PatientNo, Patientfname, patientlname FROM patient
