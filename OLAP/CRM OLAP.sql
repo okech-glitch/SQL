@@ -48,11 +48,13 @@ VALUES('GH4568','Grace','Mombasa',2575)
 INSERT INTO Customer(CustomerNo,CustomerFname,City,EmpNo)
 VALUES('YT7998','Juliet','Pretoria',2572)
 
+--GROUP BY CUBE
 SELECT EmpLname,Jobtitle, AVG(Salary) AS AverageSalary
 FROM Employee
 WHERE Age>26
 GROUP BY CUBE(EmpLname,Jobtitle)
 
+--INNER JOIN
 SELECT CustomerNo,City,Customer.EmpNo,Jobtitle
 FROM Customer
 JOIN Employee on Customer.EmpNo=Employee.EmpNo
